@@ -391,7 +391,7 @@ def tasks_report(task_id, report_format="json", elements=""):
         return response
     else:
         if(elements != ""):
-            return json_error(404, "Get specific field in report is not available in HTML format, try again with JSON format")
+            return json_error(404, "Get specific field is not available in HTML format, try again with JSON format")
         return open(report_path, "rb").read()
 
 @app.route("/tasks/screenshots/<int:task_id>")
